@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Demeter</title>
+        <link rel="stylesheet" href="style.css" />
+
+        
+    </head>
+    <body >
+
+
+      <div id="mybutton" style="background-attachment:fixed;">
+        <a href="index.html" class="btn" ><img src="images/demeter.jp2" alt="Bhutan Telecom"> </a>
+        </div>
+  
+        <div id="bannerimage" style="background-attachment: fixed;">
+          
+
+        </div>
+
+          
+        
+
+
+
+        <div class="site-section" style="padding-left: 20%; color: black;">
+
+
+            <div class="card" >
+                <img src="bhutan-economy.jpg" alt="Avatar" style="width:100%">
+                <div class="cardcontainer">
+                  <h4><b>Tsirang</b></h4> 
+                  <p>Tsholingkhar is facing irrigation issues</p> 
+
+                  <p>Description</p>
+                  <p class="text3"> sdf</p>
+                  <input type="text" class="storage">
+                  
+                  <button class="button">Comment </button>
+
+                </div>
+              </div>
+              <script>
+
+                const storageInput = document.querySelector('.storage');
+                const text = document.querySelector('.text3');
+                const button = document.querySelector('.button');
+                const storedInput = localStorage.getItem('textinp');
+
+                if(storageInput){
+                  text.textContent = storedInput;
+                }
+    
+    
+                storageInput.addEventListener('input', letter=>{
+    
+                  text.textContent = letter.target.value
+                }) 
+    
+
+                const saveL = ()=>{
+                  localStorage.setItem('textinp',text.textContent);
+                }
+
+                button.addEventListener('click', saveL);
+    
+              </script>
+        </div>
+
+        
+        
+        <div class="container" style="background-color: black; color: #dae6e2;">
+                
+          <div class=" text-center" style="padding-left: 35%;">
+            <p class="text-white">
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | <img src="images/demeter.jp2" alt="" style="max-width: 3%;"> Demeter</a>
+            </p>
+      </div>
+    </div>
+
+    </body>
+</html>
